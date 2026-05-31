@@ -127,10 +127,28 @@ function initGalleryZoom() {
 }
 
 /* ==========================================
+   5. SCROLL REVEAL (Intersection Observer)
+   ========================================== */
+function initReveals() {
+  const targets = document.querySelectorAll('[data-reveal], .gallery__item, .stat, .skill, .hero__name, .hero__eyebrow, .hero__title, .hero__subtitle');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  targets.forEach(el => observer.observe(el));
+}
+
+/* ==========================================
    Initialize
    ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
   initCursor();
   initVideoHover();
   initGalleryZoom();
+  initReveals();
 });
