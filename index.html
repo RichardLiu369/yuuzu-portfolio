@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard Liu | 游戏社区运营作品集</title>
+  <meta name="description" content="游族网络实习作品集 - 圣斗士星矢觉醒 & 小兵特攻隊 社区运营">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor">
+    <span class="cursor__text" id="cursorText"></span>
+  </div>
+
+  <!-- Starfield Canvas -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- Page Content -->
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__content">
+        <div class="hero__name" data-reveal>Richard LIU</div>
+        <div class="hero__eyebrow" data-reveal>游族网络 · 社区运营实习作品集</div>
+        <h1 class="hero__title">
+          <span class="hero__line" data-reveal><span>连接玩家</span></span>
+          <span class="hero__line" data-reveal><span>社区与游戏世界</span></span>
+        </h1>
+        <p class="hero__subtitle" data-reveal>
+          负责两款风格迥异游戏的海外与繁中社区运营，
+          从梗图创作到活动策划，用内容搭建玩家与产品之间的桥梁。
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text">
+            <h2 class="section__title" data-reveal>关于这段实习</h2>
+            <p class="about__body" data-reveal>
+              在游族网络实习期间，我同时负责两款调性完全不同的游戏社区运营。
+              圣斗士星矢觉醒面向海外硬核玩家，需要深度理解IP文化与玩家痛点；
+              小兵特攻隊则是港澳台繁中市场的Q版休闲游戏，更注重轻松活泼的互动氛围。
+            </p>
+            <p class="about__body" data-reveal>
+              从Meme创作、互动问卷、角色宣传到活动策划、漫画叙事、节日热点运营，
+              我尝试了多种内容形式，探索不同市场与玩家群体的沟通方式。
+            </p>
+          </div>
+          <div class="about__stats">
+            <div class="stat" data-reveal>
+              <span class="stat__num" data-count="2">0</span>
+              <span class="stat__label">款游戏项目</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__num" data-count="2">0</span>
+              <span class="stat__label">个地区市场</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__num" data-count="6" data-suffix="+">0</span>
+              <span class="stat__label">种内容形式</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAINT SEIYA -->
+    <section id="saint-seiya" class="section project">
+      <div class="container">
+        <div class="project__header">
+          <span class="section__label" data-reveal>PROJECT 01</span>
+          <h2 class="section__title project__title" data-reveal>圣斗士星矢觉醒</h2>
+          <p class="project__desc" data-reveal>Saint Seiya: Knights of the Zodiac · 海外社区运营</p>
+          <div class="project__tags" data-reveal>
+            <span class="tag">Facebook</span>
+            <span class="tag">英文内容</span>
+          </div>
+        </div>
+        <p class="project__intro" data-reveal>
+          经典日漫IP的海外重生。玩家群体以东南亚和欧美的怀旧动漫粉为主，
+          对黄金圣斗士、冥王篇等经典剧情有极深情感连接。
+          运营核心是「用玩家语言说话」- 从自嘲梗图到角色情怀，建立真正的社区归属感。
+        </p>
+
+        <div class="gallery" data-reveal>
+          <div class="gallery__item gallery__item--wide" data-src="images/inky-lotus.png" data-cursor="view">
+            <img src="images/inky-lotus.png" alt="Inky Lotus 角色宣传" loading="lazy">
+            <span class="gallery__label">Inky Lotus 角色宣传</span>
+          </div>
+          <div class="gallery__item" data-src="images/20260531-092930.jpeg" data-cursor="view">
+            <img src="images/20260531-092930.jpeg" alt="Meme" loading="lazy">
+            <span class="gallery__label">Meme 创作</span>
+          </div>
+          <div class="gallery__item" data-src="images/20260531-092952.jpeg" data-cursor="view">
+            <img src="images/20260531-092952.jpeg" alt="Meme" loading="lazy">
+            <span class="gallery__label">互动内容</span>
+          </div>
+          <div class="gallery__item" data-src="images/20260531-093038.jpeg" data-cursor="view">
+            <img src="images/20260531-093038.jpeg" alt="互动问卷" loading="lazy">
+            <span class="gallery__label">互动问卷</span>
+          </div>
+        </div>
+
+        <div class="gallery gallery--2" data-reveal>
+          <div class="gallery__item gallery__item--video" data-cursor="play" onclick="openVideoLightbox('videos/封面版.mp4')">
+            <video poster="images/视频图.jpeg" muted loop preload="metadata"><source src="videos/封面版.mp4" type="video/mp4"></video>
+            <span class="gallery__play">▶</span>
+            <span class="gallery__label">封面版视频</span>
+          </div>
+          <div class="gallery__item gallery__item--video" data-cursor="play" onclick="openVideoLightbox('videos/再版.mp4')">
+            <video poster="images/ScreenShot_2026-05-31_104435_553.png" muted loop preload="metadata"><source src="videos/再版.mp4" type="video/mp4"></video>
+            <span class="gallery__play">▶</span>
+            <span class="gallery__label">再版视频</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LITTLE SOLDIER -->
+    <section id="little-soldier" class="section project">
+      <div class="container">
+        <div class="project__header">
+          <span class="section__label" data-reveal>PROJECT 02</span>
+          <h2 class="section__title project__title" data-reveal>小兵特攻隊</h2>
+          <p class="project__desc" data-reveal>繁中社区运营</p>
+          <div class="project__tags" data-reveal>
+            <span class="tag tag--green">Facebook</span>
+            <span class="tag tag--green">繁中内容</span>
+            <span class="tag tag--green">Q版军事</span>
+          </div>
+        </div>
+        <p class="project__intro" data-reveal>
+          港澳台市场的Q版军事策略手游，画风可爱、节奏轻快。
+          社区运营以"轻松有趣、强互动"为核心，
+          通过小游戏、四格漫画、路线投票等形式让玩家每天都想点开社区看看。
+        </p>
+
+        <div class="gallery" data-reveal>
+          <div class="gallery__item gallery__item--tall" data-src="images/1779183800131-pknfm.jpeg" data-cursor="view">
+            <img src="images/1779183800131-pknfm.jpeg" alt="找补给游戏" loading="lazy">
+            <span class="gallery__label">找补给游戏</span>
+          </div>
+          <div class="gallery__item" data-src="images/707843579_122175659984861508_7066786475307012952_n.jpg" data-cursor="view">
+            <img src="images/707843579_122175659984861508_7066786475307012952_n.jpg" alt="路线选择" loading="lazy">
+            <span class="gallery__label">路线选择</span>
+          </div>
+          <div class="gallery__item" data-src="images/20260531-093149.png" data-cursor="view">
+            <img src="images/20260531-093149.png" alt="得奖名单" loading="lazy">
+            <span class="gallery__label">得奖名单</span>
+          </div>
+          <div class="gallery__item gallery__item--wide" data-src="images/冰.jpeg" data-cursor="view">
+            <img src="images/冰.jpeg" alt="四格漫画" loading="lazy">
+            <span class="gallery__label">四格漫画</span>
+          </div>
+          <div class="gallery__item gallery__item--wide" data-src="images/队.jpeg" data-cursor="view">
+            <img src="images/队.jpeg" alt="夏日海滩" loading="lazy">
+            <span class="gallery__label">夏日海滩</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section__title section__title--center" data-reveal>核心能力</h2>
+        <div class="skills__grid">
+          <div class="skill" data-reveal>
+            <div class="skill__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>跨文化内容本地化</h3>
+            <p>同时运营英文与繁中社区，理解不同文化背景玩家的表达习惯与幽默感</p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+            <h3>多形式内容策划</h3>
+            <p>Meme、互动帖、角色宣传、四格漫画、视频封面 - 根据目标选择最合适的载体</p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>玩家心理洞察</h3>
+            <p>从怀旧共鸣到成就感驱动，针对不同玩家群体设计情绪触发点</p>
+          </div>
+          <div class="skill" data-reveal>
+            <div class="skill__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>社区活动执行</h3>
+            <p>从活动创意、视觉设计到开奖执行的全流程社区活动策划能力</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <h2 class="footer__title" data-reveal>感谢浏览</h2>
+          <div class="footer__info" data-reveal>
+            <span>游族网络 · 社区运营实习生</span>
+            <span>·</span>
+            <span>圣斗士星矢觉醒 & 小兵特攻隊</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox__content">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="">
+      <video class="lightbox__video" id="lightbox-video" controls style="display:none;"></video>
+    </div>
+  </div>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
