@@ -519,6 +519,7 @@ body:hover .cursor { opacity: 1; }
 .lightbox__content { max-width:90vw; max-height:85vh; }
 .lightbox__img { max-width:90vw; max-height:75vh; object-fit:contain; border-radius:8px; }
 .lightbox__video { max-width:90vw; max-height:75vh; border-radius:8px; }
+.lightbox__iframe { width:90vw; height:50.625vw; max-width:1600px; max-height:90vh; border:none; border-radius:8px; }
 
 /* ==========================================
    RESPONSIVE

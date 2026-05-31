@@ -62,10 +62,28 @@ function openVideoLightbox(src) {
   const lightbox = document.getElementById('lightbox');
   const img = document.getElementById('lightbox-img');
   const video = document.getElementById('lightbox-video');
+  const iframe = document.getElementById('lightbox-iframe');
 
   img.style.display = 'none';
+  iframe.style.display = 'none';
   video.src = src;
   video.style.display = 'block';
+
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function openBilibiliLightbox(bvid) {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  const video = document.getElementById('lightbox-video');
+  const iframe = document.getElementById('lightbox-iframe');
+
+  img.style.display = 'none';
+  video.style.display = 'none';
+  video.pause();
+  iframe.src = 'https://player.bilibili.com/player.html?bvid=' + bvid + '&autoplay=1';
+  iframe.style.display = 'block';
 
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -75,10 +93,13 @@ function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
   const video = document.getElementById('lightbox-video');
   const img = document.getElementById('lightbox-img');
+  const iframe = document.getElementById('lightbox-iframe');
 
   lightbox.classList.remove('active');
   video.pause();
   video.src = '';
+  iframe.src = '';
+  iframe.style.display = 'none';
   document.body.style.overflow = '';
 }
 
@@ -88,18 +109,6 @@ document.addEventListener('click', (e) => {
   if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox__close')) closeLightbox();
 });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-/* ==========================================
-   3. VIDEO HOVER
-   ========================================== */
-function initVideoHover() {
-  document.querySelectorAll('.gallery__item--video').forEach(card => {
-    const video = card.querySelector('video');
-    if (!video) return;
-    card.addEventListener('mouseenter', () => video.play());
-    card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-  });
-}
 
 /* ==========================================
    4. GALLERY STICKY ZOOM
@@ -151,7 +160,6 @@ function initReveals() {
    ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
   initCursor();
-  initVideoHover();
   initGalleryZoom();
   initReveals();
 });
